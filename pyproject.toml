@@ -1,0 +1,15 @@
+[project]
+name = "ai-engineering-backend-course"
+version = "0.1.0"
+description = "Course materials for backend/infrastructure topics in AI Engineering (companion to ai-engineering-notebooks)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "jupyterlab==4.6.3",
+    "ipykernel==7.3.0",
+    "chromadb==1.5.9",
+    "datasets==5.0.1",
+    "python-dotenv==1.2.2",
+]
+
+[tool.uv]
+package = false
