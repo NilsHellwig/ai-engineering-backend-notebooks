@@ -63,13 +63,34 @@ An in-depth, hands-on introduction to [Chroma](https://www.trychroma.com/), an o
 
 ---
 
+### **02 - Apache Kafka**
+`chapter/02_kafka/02_1_intro_kafka.ipynb`, `02_2_kafka_features.ipynb`, `02_3_kafka_ecosystem_and_scaling.ipynb`
+
+A three-part, hands-on deep dive into [Apache Kafka](https://kafka.apache.org/), the distributed event-streaming platform behind real-time data pipelines — from a single Docker container all the way to the concepts and vocabulary needed to reason confidently about a production Kafka deployment.
+
+**Topics covered:**
+- Core concepts: **topics, partitions, offsets, brokers, producers, consumers, consumer groups**
+- **KRaft**, Kafka's modern, ZooKeeper-free cluster architecture (the only mode since Kafka 4.0)
+- Running a Kafka broker **and Kafka UI** as Docker containers, started and torn down from Python
+- Producing and consuming with **`confluent-kafka`**, and how partition **keys** determine ordering
+- **Delivery guarantees**: at-most-once, at-least-once, exactly-once, idempotent producers, `acks`
+- **Consumer groups and rebalancing**, offset management, and replaying historical messages
+- **Retention vs. log compaction**, and when to reach for each
+- Serialization basics (JSON now, Avro/Protobuf + Schema Registry as a concept) and **dead-letter topics**
+- Kafka vs. **RabbitMQ/SQS**, and the wider ecosystem (**Kafka Connect**, **Kafka Streams**)
+- **Replication, leader/follower, `min.insync.replicas`**, and basic cluster monitoring
+
+**Includes:** Hands-on exercises with solutions
+
+---
+
 *(More chapters on backend topics for AI engineering — e.g. CI/CD for AI applications, serving, deployment — will be added here over time.)*
 
 ---
 
 ## 🚀 Getting Started
 
-See **[setup.md](setup.md)** for step-by-step installation instructions specific to this repo (project setup, `uv sync`, and running Chroma via Docker).
+See **[setup.md](setup.md)** for step-by-step installation instructions specific to this repo (project setup, `uv sync`, and running backend services like Chroma and Kafka via Docker).
 
 This repo assumes you've already got a working Python/`uv` setup from the course. If you haven't installed `uv` yet or need a refresher on general tooling (terminal basics, `uv`, Jupyter Lab), see the **[setup.md](https://github.com/NilsHellwig/ai-engineering-notebooks/blob/main/setup.md)** of the main [ai-engineering-notebooks](https://github.com/NilsHellwig/ai-engineering-notebooks) repo first — it's not repeated here.
 
@@ -97,6 +118,10 @@ uv sync
 - [Chroma Documentation](https://docs.trychroma.com/)
 - [Chroma on Docker Hub](https://hub.docker.com/r/chromadb/chroma)
 - [Hugging Face `datasets` Documentation](https://huggingface.co/docs/datasets/)
+- [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
+- [Apache Kafka on Docker Hub](https://hub.docker.com/r/apache/kafka)
+- [confluent-kafka-python Documentation](https://docs.confluent.io/kafka-clients/python/current/overview.html)
+- [Kafka UI (Provectus) on GitHub](https://github.com/provectus/kafka-ui)
 - [Docker Documentation](https://docs.docker.com/)
 
 ---
